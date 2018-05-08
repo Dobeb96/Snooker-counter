@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ws: 'unsafe-inline' https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/global.css"> 
+    <link rel="stylesheet" type="text/css" href="css/game.css"> 
+    <title class="translate">Nowa gra</title>
+</head>
+
+<body id="game_page">
+    <section class="top_bar_wrapper fixed">
+        <section id="top_bar_main" class="top_bar">
+            <img id="icon_back" class="icon" src="../icons/chevron-left.png" onclick="game.endGame();" />  
+            <p id="top_bar_title" class="translate">Nowa gra</p> 
+            <img id="icon_edit" class="icon" src="../icons/edit.png" onclick="game.editAlert();" />     
+        </section>
+
+        <!-- FOR FURTHER VERSIONS -->
+        <!-- <section id="top_bar_edit" class="top_bar hidden"> -->
+            <!-- <p class="p_1" onclick="game.editAlert();">Edytuj</p> -->
+            <!-- <p class="p_2">Cofnij</p> -->
+            <!-- <img id="icon_close" class="icon" src="../icons/close.png" onclick="game.editScore(false);" /> -->
+        <!-- </section> -->
+    </section>
+
+    <section id="game">
+        <section id="game_left">
+            <p id="player1"></p>
+            <p id="player1_frames"></p>
+            <p id="player1_points">0</p>
+            <div class="balls">
+                <img class="yellow" id="LYellow" onclick="game.addPoints(this, 2)" src="../balls/yellow.png" />
+                <img class="brown" id="LBrown" onclick="game.addPoints(this, 4)" src="../balls/brown.png" />
+                <img class="green" id="LGreen" onclick="game.addPoints(this, 3)" src="../balls/green.png" />
+                <img class="blue" id="LBlue" onclick="game.addPoints(this, 5)" src="../balls/blue.png" />
+                <img class="pink" id="LPink" onclick="game.addPoints(this, 6)" src="../balls/pink.png" />
+                <div class="reds" id="LReds" onclick="game.addPoints(this, 1)">
+                    <img class="red1" id="LRed1" src="../balls/red.png" />
+                    <img class="red2" id="LRed2" src="../balls/red.png" />
+                    <img class="red3" id="LRed3" src="../balls/red.png" />
+                    <img class="red4" id="LRed4" src="../balls/red.png" />
+                    <img class="red5" id="LRed5" src="../balls/red.png" />
+                    <img class="red6" id="LRed6" src="../balls/red.png" />
+                    <img class="red7" id="LRed7" src="../balls/red.png" />
+                    <img class="red8" id="LRed8" src="../balls/red.png" />
+                    <img class="red9" id="LRed9" src="../balls/red.png" />
+                    <img class="red10" id="LRed10" src="../balls/red.png" />
+                    <img class="red11" id="LRed11" src="../balls/red.png" />
+                    <img class="red12" id="LRed12" src="../balls/red.png" />
+                    <img class="red13" id="LRed13" src="../balls/red.png" />
+                    <img class="red14" id="LRed14" src="../balls/red.png" />
+                    <img class="red15" id="LRed15" src="../balls/red.png" />
+                </div>
+                <img class="black" id="LBlack" onclick="game.addPoints(this, 7)" src="../balls/black.png" />
+            </div>
+        </section>
+        <section id="game_right">
+            <p id="player2_points">0</p>
+            <p id="player2_frames"></p>
+            <p id="player2"></p>
+            <div class="balls">
+                <img class="yellow" id="RYellow" onclick="game.addPoints(this, 2)" src="../balls/yellow.png" />
+                <img class="brown" id="RBrown" onclick="game.addPoints(this, 4)" src="../balls/brown.png" />
+                <img class="green" id="RGreen" onclick="game.addPoints(this, 3)" src="../balls/green.png" />
+                <img class="blue" id="RBlue" onclick="game.addPoints(this, 5)" src="../balls/blue.png" />
+                <img class="pink" id="RPink" onclick="game.addPoints(this, 6)" src="../balls/pink.png" />
+                <div class="reds" id="RReds" onclick="game.addPoints(this, 1)">
+                    <img class="red1" id="RRed1" src="../balls/red.png" />
+                    <img class="red2" id="RRed2" src="../balls/red.png" />
+                    <img class="red3" id="RRed3" src="../balls/red.png" />
+                    <img class="red4" id="RRed4" src="../balls/red.png" />
+                    <img class="red5" id="RRed5" src="../balls/red.png" />
+                    <img class="red6" id="RRed6" src="../balls/red.png" />
+                    <img class="red7" id="RRed7" src="../balls/red.png" />
+                    <img class="red8" id="RRed8" src="../balls/red.png" />
+                    <img class="red9" id="RRed9" src="../balls/red.png" />
+                    <img class="red10" id="RRed10" src="../balls/red.png" />
+                    <img class="red11" id="RRed11" src="../balls/red.png" />
+                    <img class="red12" id="RRed12" src="../balls/red.png" />
+                    <img class="red13" id="RRed13" src="../balls/red.png" />
+                    <img class="red14" id="RRed14" src="../balls/red.png" />
+                    <img class="red15" id="RRed15" src="../balls/red.png" />
+                </div>
+                <img class="black" id="RBlack" onclick="game.addPoints(this, 7)" src="../balls/black.png" />
+            </div>
+        </section>
+        <section id="bottom">
+            <button id="foul" class="button button_small halved" onclick="game.foul();"><p class="translate">Faul</p></button>
+            <button id="end" class="button button_small halved" onclick="game.endGame();"><p class="translate">Zakoncz</p></button>
+        </section>
+
+        <alert id="alert_wrapper1" class="alert_wrapper hidden">
+            <alert class="alert a3"><p class="translate">Zakończyć grę?</p>
+                <button class="confirm_true button button_small" onclick="game.endGame(true);"><p class="translate">OK</p></button>
+                <button class="confirm_false button button_small" onclick="game.endGame(false);"><p class="translate">Anuluj</p></button>
+            </alert>
+        </alert>
+
+        <alert id="alert_wrapper2" class="alert_wrapper hidden">
+            <alert class="alert a4">
+                <p class="translate">Edytuj wynik</p>
+                    <input id="player1_points_edit" class="button button_small halved_margin" type="number">
+                    <input id="player2_points_edit" class="button button_small halved_margin" type="number">
+                <button class="confirm_true button button_small" onclick="game.editAlert(true);"><p class="translate">OK</p></button>
+                <button class="confirm_false button button_small" onclick="game.editAlert(false);"><p class="translate">Anuluj</p></button>
+            </alert>
+        </alert>
+
+        <alert id="alert_wrapper3" class="alert_wrapper hidden">
+            <alert class="alert a5">
+                <p class="translate">Faul</p>
+                    <button id="player1_foul" class="button button_small button_half highlighted" onclick="game.foul('player1')"><p></p></button>
+                    <button id="player2_foul" class="button button_small button_half" onclick="game.foul('player2')"><p></p></button>
+                    <button id="four_pts" class="button button_small button_quarter highlighted" onclick="game.foul('4pts')"><p class="translate">+4pkt</p></button>
+                    <button id="five_pts" class="button button_small button_quarter" onclick="game.foul('5pts')"><p class="translate">+5pkt</p></button>
+                    <button id="six_pts" class="button button_small button_quarter" onclick="game.foul('6pts')"><p class="translate">+6pkt</p></button>
+                    <button id="seven_pts" class="button button_small button_quarter" onclick="game.foul('7pts')"><p class="translate">+7pkt</p></button>
+                <button class="confirm_true button button_small" onclick="game.foul(true);"><p class="translate">OK</p></button> 
+                <button class="confirm_false button button_small" onclick="game.foul(false);"><p class="translate">Anuluj</p></button> 
+            </alert>
+        </alert>
+    </section>
+    <script type="text/javascript" src="js/english_translation.js"></script>
+    <script type="text/javascript" src="js/translate.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+</body>
+</html>

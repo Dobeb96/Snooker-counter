@@ -1,0 +1,137 @@
+@font-face {
+    font-family: PrimaryFont;
+    src: url("../../fonts/Zilap_Monograma.ttf");
+}
+@font-face {
+    font-family: SecondaryFont;
+    src: url("../../fonts/CaviarDreams.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;  /* For some Androids   */
+}
+
+#background_photo {
+    background: url("../../res/background/background.jpg") no-repeat center center fixed;
+    position: fixed;
+    top:0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: -10;
+}
+
+.top_bar_wrapper {
+    background-color: rgba(0, 0, 0, 1);
+    width: 100vw;
+    height: 12vh;
+} .top_bar_wrapper_light {
+    background-color: rgba(0, 0, 0, .2);
+} .top_bar {
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    align-self: center;
+} .top_bar > p {
+    font-family: PrimaryFont;
+    margin: auto 0;
+    font-size: 24px;
+    color: white;
+} .top_bar > .p_1 {
+    display: block;
+    margin-left: auto;
+    margin-right: 1vw;
+} .top_bar > .p_2 {
+    display: block;
+    margin-left: 0;
+    margin-right: 12vmax;
+} .icon {
+    height: 12vh;
+} .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around; 
+} .wrapper {
+    align-self: center;
+}
+
+.button {
+    display: block;
+    width: 98vw;
+    margin: .5vh 0;
+    border: 0; 
+    background-color: rgba(255,255,255, .2); 
+    color: white;
+} .button p {
+    font-family: PrimaryFont;
+    font-size: 24px;
+} .button_small {
+    height: 15vh;
+} .button_big {
+    height: 30.5vh;
+} .button_half {
+    float: left;
+    margin: 0 .5% .5vh;
+    width: 49%;
+} .button_quarter {
+    float: left;
+    margin: 0 .5% .5vh;
+    width: 24%;
+} .button_quarter > p {
+    font-family: SecondaryFont;
+}
+
+.alert_wrapper {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .6);
+} .alert {
+    position: relative;
+    box-sizing: border-box;
+    left: 1vw;
+    background-color: orange;
+    display: block;
+    width: 98vw;
+} .alert > p {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 2vh;
+    width: 98vw;
+    height: 15vh;
+    text-align: center;
+    font-size: 1.5em;
+} .a3 {
+    top: 25vh;
+    height: 50vh;
+} .a4 {
+    top: 17.5vh;
+    height: 65vh;
+} .a5 {
+    top: 12.5vh;
+    height: 80vh;
+} .hidden {
+    display: none !important;
+} .highlighted {
+    background-color: rgba(255, 255, 255, .4);
+}

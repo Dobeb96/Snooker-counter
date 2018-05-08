@@ -1,0 +1,9 @@
+input {
+    box-sizing: border-box;
+    padding-left: 1vw;
+    font-family: SecondaryFont;
+    font-size: 1.25em;
+    color: white;
+} input::placeholder {
+    color: rgba(255,255,255, .5);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ws: 'unsafe-inline' https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/global.css"> 
+    <link rel="stylesheet" type="text/css" href="css/history.css"> 
+    <title class="translate">Nowa gra</title>
+</head>
+
+<body>
+    <div id="background_photo"></div>
+    <section class="top_bar_wrapper top_bar_wrapper_light fixed">
+        <section id="top_bar" class="top_bar">
+            <a href="./index.html">
+            <img class="icon" src="../icons/chevron-left.png" />
+            </a>
+            <p class="translate">Historia twoich gier</p>
+        </section>
+    </section>
+
+    <section id="history_of_games">
+        <!-- DYNAMICALLY CREATED  -->
+    </section>
+
+    <alert id="alert_wrapper1" class="alert_wrapper hidden">
+    <alert class="alert a3">
+        <p class="translate">Czy na pewno chcesz usunąć ten rezultat?</p>
+        <button class="confirm_true button button_small" onclick="insertResults.deleteAlert(true);"><p class="translate">OK</p></button>
+        <button class="confirm_false button button_small" onclick="insertResults.deleteAlert(false);"><p class="translate">Anuluj</p></button>
+    </alert>
+</alert>
+    <script type="text/javascript" src="js/english_translation.js"></script>
+    <script type="text/javascript" src="js/translate.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/history.js"></script>
+</body>
+</html>

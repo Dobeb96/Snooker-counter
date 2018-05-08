@@ -1,0 +1,41 @@
+#history_of_games {
+    margin-left: 1vw;
+    margin-top: 12vh;
+} .button p {
+    font-family: SecondaryFont; 
+    display: inline;
+}
+
+.scores_wrapper_left,
+  .scores_wrapper_right {
+    box-sizing: border-box;
+    padding: 1vh;
+    width: 49vw;
+    display: flex;
+    justify-content: space-between;
+} .scores_wrapper_left {
+    float: left; 
+} .scores_wrapper_right {
+    float: right;  
+} .button .date {
+    font-size: 1em;
+    position: relative;
+    top: 3vh;
+    width: 98vw;
+    float: left;
+}
+
+.button {
+    position: relative;
+} .delete_entry {
+    position: absolute;
+    top:0; right: 0;
+} .icon_delete {
+    width: 4vh;
+    height: 4vh;
+} alert > p {
+    font-family: SecondaryFont;
+    color: white;
+} .alert {
+    background-color: black;
+}

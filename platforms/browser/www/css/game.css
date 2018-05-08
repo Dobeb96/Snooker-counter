@@ -1,0 +1,172 @@
+body {
+    background-color: yellowgreen; 
+    font-family: SecondaryFont;
+}
+
+#top_bar {
+    background-color: black;
+} #icon_edit {
+    position:absolute;
+    top: 3vh;
+    right: 3vh;
+    height: 6vh;
+} #icon_close {
+    float: right; 
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    height: 6vh;
+}
+
+#game {
+    width: 100vw;
+    height: 88vh; 
+    padding-top: 12vh;
+} #game_left,
+  #game_right {
+    float:left;
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    box-sizing: border-box;
+    padding: 1vh;
+    height: 100%;
+  }
+ #game_left {
+    text-align: left;
+     /* background-color: gold;  */
+} #game_right {
+    text-align: right;
+     /* background-color: burlywood;  */
+} #player1_frames,
+  #player1_points {
+    text-align: right;
+} #player2_frames,
+  #player2_points {
+    text-align: left; 
+}
+
+p {
+    display: inline;
+} #player1,
+  #player2 {
+    font-size: 1.5em;
+    width: 24vw;
+} #player1_frames,
+  #player2_frames {
+    padding-top: 1.5em;
+    width: 9vw;
+} #player1_points,
+  #player2_points {
+    font-size: 2em;
+    width: 15vw;
+}
+
+.balls {
+    position: absolute;
+    width: 40vw;
+    height: 64vh;
+    top: 22vh;
+} .balls img {
+    position: absolute;
+    display: block;
+    width: 8vw;
+} .yellow {
+    top: 0;
+    right: left;
+} .brown {
+    top: 0;
+    left: 16vw;
+} .green {
+    top: 0;
+    left: 32vw;
+} .blue {
+    top: 16vmin;
+    left: 16vw;
+} .pink {
+    top: 32vmin;
+    left: 16vw;
+} .reds {
+    top: 48vmin;
+    position: relative;
+} .red1 {
+    top: 0;
+    left: 16vw;
+} .red2 {
+    top: 7vw;
+    left: 12vw;
+} .red3 {
+    top: 7vw;
+    left: 20vw;
+} .red4 {
+    top: 14vw;
+    left: 8vw;
+} .red5 {
+    top: 14vw;
+    left: 16vw;
+} .red6 {
+    top: 14vw;
+    left: 24vw;
+} .red7 {
+    top: 21vw;
+    left: 4vw;
+} .red8 {
+    top: 21vw;
+    left: 12vw;
+} .red9 {
+    top: 21vw;
+    left: 20vw;
+} .red10 {
+    top: 21vw;
+    left: 28vw;
+} .red11 {
+    top: 28vw;
+    left: 0vw;
+} .red12 {
+    top: 28vw;
+    left: 8vw;
+} .red13 {
+    top: 28vw;
+    left: 16vw;
+} .red14 {
+    top: 28vw;
+    left: 24vw;
+} .red15 {
+    top: 28vw;
+    left: 32vw;
+} .black {
+    top: 88vmin;
+    left: 16vw;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} .halved {
+    margin: .5vw;
+    width: 49vw;
+    float: left;
+} .halved_margin {
+    margin: 0 .5vw .5vh;
+    width: 48vw;
+    float: left;
+} #foul {
+    background-color: red;
+    color: white;
+} #end {
+    background-color: black;
+    color: white;
+}
+
+#player1_points_edit,
+#player2_points_edit {
+    font-family: SecondaryFont;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#player1_foul > p,
+#player2_foul > p {
+    font-family: SecondaryFont;
+}

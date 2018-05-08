@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.maciejdobosz.snookercounter"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.maciejdobosz.snookercounter"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+            "id": "cordova-plugin-globalization.GlobalizationError",
+            "pluginId": "cordova-plugin-globalization",
+            "clobbers": [
+                "window.GlobalizationError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+            "id": "cordova-plugin-globalization.globalization",
+            "pluginId": "cordova-plugin-globalization",
+            "clobbers": [
+                "navigator.globalization"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-globalization/www/browser/moment.js",
+            "id": "cordova-plugin-globalization.moment",
+            "pluginId": "cordova-plugin-globalization",
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-globalization/src/browser/GlobalizationProxy.js",
+            "id": "cordova-plugin-globalization.GlobalizationProxy",
+            "pluginId": "cordova-plugin-globalization",
+            "runs": true
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.2",
+        "cordova-plugin-globalization": "1.0.7"
+    }
+}
